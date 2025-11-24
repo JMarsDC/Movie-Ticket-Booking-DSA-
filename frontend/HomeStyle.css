@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    background-image: url('img/CenimaWithFam.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+    background-size: 100% auto;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 120px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 50px;
+}
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #E50914;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+}
+
+.navbar a:hover::after {
+    width: calc(100% + 10px);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 40px;
+    padding-top: 300px;
+    padding-left: 100px;
+    min-height: 80vh;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-buttons button {
+    padding: 16px 60px;
+    background-color: transparent;
+    border: 2px solid #E50914;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-buttons button:first-child {
+    background-color: #E50914;
+    border: 2px solid #E50914;
+}
+
+.hero-buttons button:hover {
+    background-color: #E50914;
+    transform: scale(1.1);
+}
+
+.now,
+.coming {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.now-showing {
+    margin-top: 250px; 
+    background-color: black;
+    padding: 10px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.coming-soon-section {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: -80px; 
+}
+
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex: 1 1 300px;
+    max-width: 300px;
+}
+
+.movie-poster {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 5px;
+    transition: transform 0.4s ease;
+}
+
+.movie:hover {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+}
+
+.stars {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 210px;
+}
+
+.movie-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.movie-buttons button {
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 2px solid #E50914;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.movie-buttons button:first-child {
+    background-color: #E50914;
+    border: 2px solid #E50914;
+}
+
+.movie-buttons button:hover {
+    background-color: #E50914;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar nav {
+        gap: 30px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+        padding-top: 200px;
+        padding-left: 50px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        gap: 15px;
+    }
+
+    .hero-buttons button {
+        padding: 12px 40px;
+        font-size: 0.9rem;
+    }
+
+    .now-showing {
+        padding: 20px;
+        text-align: center;
+        margin-top: 200px; 
+    }
+
+    .now-showing h1 {
+        font-size: 2rem;
+    }
+
+    .coming-soon-section {
+        padding: 20px;
+        text-align: center;
+        margin-top: 10px; 
+    }
+
+    .coming-soon-section .coming-soon {
+        font-size: 2rem;
+    }
+
+    .movies-grid {
+        gap: 20px;
+    }
+
+    .movie {
+        padding: 15px;
+        flex: 1 1 250px;
+        max-width: 250px;
+    }
+
+    .movie-poster {
+        max-width: 250px;
+    }
+
+    .stars {
+        font-size: 1.3rem;
+    }
+
+    .movie-buttons {
+        gap: 15px;
+    }
+
+    .movie-buttons button {
+        padding: 12px 40px;
+        font-size: 0.9rem;
+    }
+
+    .stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .now,
+    .coming {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    .navbar nav {
+        gap: 20px;
+    }
+    .hero {
+        padding: 30px 15px;
+        padding-top: 150px;
+        padding-left: 20px;
+        min-height: 60vh;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .movies-grid {
+        gap: 15px;
+    }
+
+    .movie {
+        padding: 10px;
+        flex: 1 1 200px;
+        max-width: 200px;
+    }
+
+    .movie-poster {
+        max-width: 200px;
+    }
+
+    .stars {
+        font-size: 1.2rem;
+        margin-right: 150px;
+    }
+
+    .movie-buttons {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .movie-buttons button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    .now,
+    .coming {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .now-showing {
+        text-align: center;
+        margin-top: 10px; 
+    }
+
+    .coming-soon-section {
+        text-align: center;
+        margin-top: 10px; 
+    }
+}
+
+footer {
+    padding: 50px 0 20px;
+    background-color: #000000;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.footer-column h6 {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    color: #999;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-column p {
+    color: #999;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 0.75rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #999;
+    transition: color 0.3s ease;
+    font-size: 0.75rem;
+}
+
+.footer-column ul li a:hover {
+    color: #E50914;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.social-icon:hover {
+    background-color: #E50914;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.75rem;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .movie-buttons {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .movie-buttons button {
+        padding: 12px 40px;
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .movie-buttons {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .movie-buttons button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }    
+}

@@ -1,66 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking - YayMovies</title>
-  <link rel="stylesheet" href="style1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BookingStyle.css">
+    <title>Booking</title>
 </head>
-
 <body>
+    <!-- navbar -->
+    <header class="navbar">
+        <img src="img/temp-logo.png" alt="GumeraX-QUINNEMA Logo" class="logo">
+        <nav>
+            <a href="Home.html">HOME</a>
+            <a href="#exclusive">EXCLUSIVE</a>
+        </nav>
+    </header>
 
-  <header class="navbar">
-    <div class="logo">YayMovies</div>
-    <nav>
-      <a href="Home.html">Now Showing</a>
-      <a href="#coming-soon">Coming Soon</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <!-- main container -->
+    <div class="container">
 
-  <div class="container">
+        <!-- movie info -->
+        <div class="movie-info">
+            <img src="#" alt="Movie Poster (Placeholder)">
+            <div class="movie-details">
+                <h2 id="movie-title">Goodboy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
 
-    <!-- Movie Info -->
-    <div class="movie-info">
-      <img src="#" alt="Movie Poster (Placeholder)">
-      <div class="movie-details">
-        <h2 id="movie-title">Goodboy</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-
-    <!-- Ticket and Price -->
-    <div class="booking-section">
-      <div class="ticket-info">
-        <h1>One Ticket</h1>
-      </div>
+        <!-- ticket & price -->
+        <div class="booking-section">
+            <div class="ticket-info">
+                <h1>One Ticket ONLY</h1>
+            </div>
       <div class="total-price">
-  <button id="snack-btn" class="submit-btn">Add Snacks? +₱100</button>
+  <button id="snack-btn" class="snacks">Add Snacks? +₱100</button>
   <br>
-  ₱<span id="ticket-price" data-base-price="590">590.00</span>
+  <br>
+  <br>
+  Total Payment: ₱<span id="ticket-price" data-base-price="590">590.00</span>
       </div>
+        </div>
+
+        <!-- form section -->
+        <div class="form-section">
+
+        <!-- time selection on top -->
+        <div class="time-section">
+            <label>Select Time:</label>
+            <div class="time-options">
+                <input type="radio" name="time" id="time3" value="3PM">
+                <label for="time3" class="time-box">3:00 PM</label>
+
+                <input type="radio" name="time" id="time6" value="6PM">
+                <label for="time6" class="time-box">6:00 PM</label>
+
+                <input type="radio" name="time" id="time9" value="9PM">
+                <label for="time9" class="time-box">9:00 PM</label>
+            </div>
+        </div>
+
+        <!-- seat selection -->
+<div class="seat-section">
+    <div class="seat-legend">
+        <div class="legend-item">
+            <div class="legend-color your-seat"></div>
+            <span>Your seat</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color available"></div>
+            <span>Available</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color sold"></div>
+            <span>Sold</span>
+        </div>
+    </div>
+    
+    <div class="cinema-screen">SCREEN</div>
+
+    <input type="hidden" id="seat" value="">
+    <div class="seat-map-container">
+        <div class="seat-row">
+            <div class="row-label">A</div>
+            <div class="seat available" data-seat="A12">11</div>
+            <div class="seat available" data-seat="A11">10</div>
+            <div class="seat available" data-seat="A10">9</div>
+            <div class="seat available" data-seat="A9">8</div>
+            <div class="seat available" data-seat="A8">7</div>
+            <div class="seat available" data-seat="A7">6</div>
+            <div class="seat available" data-seat="A6">5</div>
+            <div class="seat available" data-seat="A5">4</div>
+            <div class="seat available" data-seat="A3">3</div>
+            <div class="seat available" data-seat="A2">2</div>
+            <div class="seat available" data-seat="A1">1</div>
+        </div>
+        
+        <!-- Rows B through L (normal rows) -->
+        <div class="seat-row">
+            <div class="row-label">B</div>
+            <div class="seat available" data-seat="B12">12</div>
+            <div class="seat available" data-seat="B11">11</div>
+            <div class="seat available" data-seat="B10">10</div>
+            <div class="seat available" data-seat="B9">9</div>
+            <div class="seat available" data-seat="B8">8</div>
+            <div class="seat available" data-seat="B7">7</div>
+            <div class="seat available" data-seat="B6">6</div>
+            <div class="seat available" data-seat="B5">5</div>
+            <div class="seat available" data-seat="B4">4</div>
+            <div class="seat available" data-seat="B3">3</div>
+            <div class="seat available" data-seat="B2">2</div>
+            <div class="seat available" data-seat="B1">1</div>
+        </div>
+        
+        <div class="seat-row">
+            <div class="row-label">C</div>
+            <div class="seat available" data-seat="C12">12</div>
+            <div class="seat available" data-seat="C11">11</div>
+            <div class="seat available" data-seat="C10">10</div>
+            <div class="seat available" data-seat="C9">9</div>
+            <div class="seat available" data-seat="C8">8</div>
+            <div class="seat available" data-seat="C7">7</div>
+            <div class="seat available" data-seat="C6">6</div>
+            <div class="seat available" data-seat="C5">5</div>
+            <div class="seat available" data-seat="C4">4</div>
+            <div class="seat available" data-seat="C3">3</div>
+            <div class="seat available" data-seat="C2">2</div>
+            <div class="seat available" data-seat="C1">1</div>
+        </div>
+        
+        <div class="seat-row">
+            <div class="row-label">D</div>
+            <div class="seat available" data-seat="D12">12</div>
+            <div class="seat available" data-seat="D11">11</div>
+            <div class="seat available" data-seat="D10">10</div>
+            <div class="seat available" data-seat="D9">9</div>
+            <div class="seat available" data-seat="D8">8</div>
+            <div class="seat available" data-seat="D7">7</div>
+            <div class="seat available" data-seat="D6">6</div>
+            <div class="seat available" data-seat="D5">5</div>
+            <div class="seat available" data-seat="D4">4</div>
+            <div class="seat available" data-seat="D3">3</div>
+            <div class="seat available" data-seat="D2">2</div>
+            <div class="seat available" data-seat="D1">1</div>
+        </div>
+        
+    </div>
+</div>
+
+        <!-- name input -->
+        <div class="input-section">
+            <label for="name">Enter Your Name:</label>
+            <input type="text" id="name" placeholder="Your name">
+        </div>
     </div>
 
-    <!-- Seat and Name Input -->
-    <div class="form-section">
-      <div class="seat-section">
-        <label for="seat">Select Seat:</label>
-        <select id="seat">
-          <option value="A1">A1</option>
-          <option value="A2">A2</option>
-          <option value="A3">A3</option>
-        </select>
-      </div>
-
-      <div class="input-section">
-        <label for="name">Enter Your Name:</label>
-        <input type="text" id="name" placeholder="Your name">
-      </div>
+        <!-- buttons -->
+        <div class="button-section">
+            <button class="submit-btn" onclick="storeBooking()">Confirm Booking</button>
+            <button class="cancel-btn" onclick="cancelBooking()">Cancel</button>
+        </div>
     </div>
-
-    <button class="submit-btn" onclick="storeBooking()">Confirm Booking</button>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

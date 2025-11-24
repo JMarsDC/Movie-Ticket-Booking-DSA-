@@ -78,6 +78,7 @@ app.Run("http://localhost:5501");
 
 public class Booking
 {
+    public string? time { get; set; }
     public string? name { get; set; }
     public string? seat { get; set; }
     public string? movieTitle { get; set; }
@@ -116,7 +117,7 @@ public class BookingLinkedList
             tail = newNode;
         }
 
-        Console.WriteLine($"✅ Booking added: {booking.name} | seat: {booking.seat} | Movie: {booking.movieTitle} | cost: {booking.cost}");
+        Console.WriteLine($"✅ Booking added: {booking.name} | time: {booking.time} | seat: {booking.seat} | Movie: {booking.movieTitle} | cost: {booking.cost}");
     }
 
     public void DisplayAll()
@@ -125,7 +126,7 @@ public class BookingLinkedList
         BookingNode? temp = head;
         while (temp != null)
         {
-            Console.WriteLine($"→ {temp.Data.name}, seat {temp.Data.seat}, Movie {temp.Data.movieTitle}, cost: {temp.Data.cost}");
+            Console.WriteLine($"→ {temp.Data.name}, time: {temp.Data.time}, seat: {temp.Data.seat}, Movie: {temp.Data.movieTitle}, cost: {temp.Data.cost}");
             temp = temp.Next;
         }
     }
@@ -133,7 +134,7 @@ public class BookingLinkedList
     public bool SeatTaken(Booking booking)
     {
         BookingNode? temp = head;
-        while (temp != null && temp.Data.seat!=booking.seat)
+        while (temp != null && (temp.Data.seat!=booking.seat || temp.Data.time!=booking.time))
         {
             temp = temp.Next;
         }

@@ -1,188 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YayMovies</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="navbar">
-    <div class="logo">YayMovies</div>
-    <nav>
-      <a href="#now-showing">Now Showing</a>
-      <a href="#coming-soon">Coming Soon</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GumeraX-QUINNEMA</title>
+    <link rel="stylesheet" href="HomeStyle.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
 
-<!-- INTRO SECTION -->
-<section class="intro">
-  <h1>Experience Cinema Like Never Before</h1>
-  <p>Immerse yourself in the latest blockbusters with state-of-the-art sound systems, crystal-clear picture quality, and the most comfortable seating in Los Angeles.</p>
-</section>
-
-  <!-- NOW SHOWING SECTION -->
-  <section id="now-showing" class="movie-section">
-    <h2>Now Showing</h2>
-    <div class="movie-grid">
-      <div class="movie-card">
-        <img src="https://static.wikia.nocookie.net/the-snack-encyclopedia/images/7/7d/Apple.png/revision/latest?cb=20200706145821/300x400" alt="Movie Poster">
-        <div class="movie-details">
-          <span class="movie-format">2D</span>
-          <div class="stars">★★★★★</div>
-          <div class="buttons">
-            <a href="Booking1.html" class="book">Book Tickets</a>
-            <button class="trailer">Watch Trailer</button>
-          </div>
+  <body>
+    <!-- nav bar logo(img) HOME   BOOK TICKET   EXCLUSIVE -->
+    <header class="navbar">
+        <img src="img/temp-logo.png" alt="GumeraX-QUINNEMA Logo" class="logo">
+        <nav>
+            <a href="#" class="nav-link"> HOME </a>
+            <a href="#book-ticket" class="nav-link"> BOOK TICKET </a>
+            <a href="#exclusive" class="nav-link"> EXCLUSIVE </a>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Experience Cinema</h1>
+        <h2>Like Never Been Before</h2>
+        <p>Immerse yourself in the latest blockbusters with state-of-the-art <br> sound system, and the most comfortable seating cinema in <br> Cebu City.</p> <br>
+       <div class="hero-buttons">
+            <button type="button" onclick="document.querySelector('#now-showing').scrollIntoView({behavior: 'smooth'});">Book Now</button>
+            <button type="button" onclick="document.querySelector('#now-showing').scrollIntoView({behavior: 'smooth'});">View Deals</button>
         </div>
-      </div>
-
-      <div class="movie-card">
-        <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-        <div class="movie-details">
-          <span class="movie-format">2D</span>
-          <div class="stars">★★★★☆</div>
-          <div class="buttons">
-            <a href="Booking2.html" class="book">Book Tickets</a>
-            <button class="trailer">Watch Trailer</button>
-          </div>
+    </section>
+    <!-- Now Showing Section -->
+    <section id="now-showing" class="now-showing">
+        <h1 class="now">Now Showing</h1>
+        <div class="movies-grid">
+            <div class="movie">
+                <img src="img/temp-movie-spide.jpg" alt="Movie 1 Poster" class="movie-poster">
+                <h5>Spiderman: No way Home</h5>
+                <div class="stars" style="margin-top: 43px;">★★★★★</div>
+                <div class="movie-buttons">
+                    <a href="Booking1.html">
+                        <button type="button">Book Tickets</button> 
+                    </a>
+                  
+                    <button type="button" onclick="window.location.href='https://youtu.be/JfVOs4VSpmA'">View Trailer</button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="img/doctoor.jpg" alt="Movie 2 Poster" class="movie-poster">
+                <h5>Doctor Strange: Multiverse of Madness</h5>
+                <div class="stars">★★★★★</div>
+                <div class="movie-buttons">
+                    <a href="Booking1.html">
+                        <button type="button">Book Tickets</button> 
+                    </a>
+                    <button type="button" onclick="window.location.href='https://youtu.be/aWzlQ2N6qqg'">View Trailer</button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="img/demon.jpg" alt="Movie 3 Poster" class="movie-poster">
+                <h5>Demon Slayer: Infinity Castle</h5>
+                <div class="stars" style="margin-top: 22px;">★★★★★</div>
+                <div class="movie-buttons">
+                      <a href="Booking1.html">
+                        <button type="button">Book Tickets</button> 
+                    </a>
+                    <button type="button" onclick="window.location.href='https://youtu.be/x7uLutVRBfI'">View Trailer</button>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="movie-card">
-        <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-        <div class="movie-details">
-          <span class="movie-format">3D</span>
-          <div class="stars">★★★★★</div>
-          <div class="buttons">
-            <button class="book">Book Tickets</button>
-            <button class="trailer">Watch Trailer</button>
-          </div>
-        </div>
-      </div>
+    <br>
+    <br>
+    <br>
+    <br>
 
-      <div class="movie-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvuFWmgStX6zF38A7ZufXtDXTlUag-rcKnew&s/300x400" alt="Movie Poster">
-        <div class="movie-details">
-          <span class="movie-format">2D</span>
-          <div class="stars">★★★★☆</div>
-          <div class="buttons">
-            <button class="book">Book Tickets</button>
-            <button class="trailer">Watch Trailer</button>
-          </div>
+    <section id="coming-soon" class="coming-soon-section">
+        <h1 class="coming">Coming Soon</h1>
+        <div class="movies-grid">
+            <div class="movie">
+                <img src="img/avatar.jpg" alt="Movie 4 Poster" class="movie-poster">
+                <h5>Avatar: Fire and Ash</h5>
+                <div class="stars">★★★★★</div>
+                <div class="movie-buttons">
+                     <a href="ComingSoon.html">
+                        <button type="button">Book Tickets</button> 
+                    </a>
+                    <button type="button" onclick="window.location.href='https://youtu.be/nb_fFj_0rq8'">View Trailer</button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="img/oppen.jpg" alt="Movie 5 Poster" class="movie-poster">
+                <h5>Oppenheimer 2</h5>
+                <div class="stars" style="margin-top: 30.2px;">★★★★★</div>
+                <div class="movie-buttons">
+                    <a href="ComingSoon.html">
+                        <button type="button">Book Tickets</button> 
+                    </a>
+                    <button type="button" onclick="window.location.href='https://youtu.be/culYwycIRP0'">View Trailer</button>
+                </div>
+            </div>
+            <div class="movie">
+                <img src="img/doom.jpg" alt="Movie 6 Poster" class="movie-poster">
+                <h5>Avengers: Doomsday</h5>
+                <div class="stars" style="margin-top: 17px;">★★★★★</div>
+                <div class="movie-buttons">
+                      <a href="ComingSoon.html">
+                        <button type="button">Book Tickets</button> 
+                    </a>
+                    <button type="button" onclick="window.location.href='https://youtu.be/jdR_grkZS8w'">View Trailer</button>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="movie-card">
-        <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-        <div class="movie-details">
-          <span class="movie-format">2D</span>
-          <div class="stars">★★★★★</div>
-          <div class="buttons">
-            <button class="book">Book Tickets</button>
-            <button class="trailer">Watch Trailer</button>
-          </div>
-        </div>
-      </div>
+    <br>
+    <br>
+    <br>
+    <br>
 
-      <div class="movie-card">
-        <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
-        <div class="movie-details">
-          <span class="movie-format">3D</span>
-          <div class="stars">★★★★★</div>
-          <div class="buttons">
-            <button class="book">Book Tickets</button>
-            <button class="trailer">Watch Trailer</button>
-          </div>
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+            <img src="img/temp-logo.png" alt="GumeraX-QUINNEMA Logo" class="logo">
+                <p>Immerse yourself in the latest blockbusters with state-of-the-art sound system, and the most comfortable seating in Cebu City.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Book Ticket</a></li>
+                    <li><a href="#">Exclusive</a></li>
+                    <li><a href="#now-showing">Now Showing</a></li>
+                    <li><a href="#coming-soon">Coming Soon</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Support Center</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GUMERAx-Quinnema. All rights reserved.</p>
+        </div>
     </div>
-  </section>
+</footer>
 
-  <!-- COMING SOON SECTION -->
-  <section id="coming-soon" class="movie-section">
-    <h2>Coming Soon</h2>
-    <div class="movie-grid">
-      <div class="movie-card coming-soon">
-        <img src="https://www.freshconnection.com.au/cdn/shop/products/grapefruit-yellow-fruit-fresh-connection_835x675.jpg?v=1594005471/300x400" alt="Coming Soon Poster">
-        <div class="overlay">COMING SOON</div>
-      </div>
 
-      <div class="movie-card coming-soon">
-        <img src="https://via.placeholder.com/300x400" alt="Coming Soon Poster">
-        <div class="overlay">COMING SOON</div>
-      </div>
-
-      <div class="movie-card coming-soon">
-        <img src="https://via.placeholder.com/300x400" alt="Coming Soon Poster">
-        <div class="overlay">COMING SOON</div>
-      </div>
-
-      <div class="movie-card coming-soon">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhTn9mIiFqW_tqIhD1fi5nLBV--vF1fGLrEQ&s/300x400" alt="Coming Soon Poster">
-        <div class="overlay">COMING SOON</div>
-      </div>
-
-      <div class="movie-card coming-soon">
-        <img src="https://via.placeholder.com/300x400" alt="Coming Soon Poster">
-        <div class="overlay">COMING SOON</div>
-      </div>
-
-      <div class="movie-card coming-soon">
-        <img src="https://via.placeholder.com/300x400" alt="Coming Soon Poster">
-        <div class="overlay">COMING SOON</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="contact">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h3>YayMovies</h3>
-        <p>Your premier destination for the latest movies and unforgettable cinema experiences in Los Angeles.</p>
-      </div>
-
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li>Now Showing</li>
-          <li>Coming Soon</li>
-          <li>Our Theaters</li>
-          <li>Contact Us</li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>Services</h4>
-        <ul>
-          <li>Online Booking</li>
-          <li>Group Events</li>
-          <li>Private Screenings</li>
-          <li>Gift Cards</li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>Contact Info</h4>
-        <p>123 Cinema Boulevard<br>Los Angeles, CA 90028</p>
-        <p>+1 (555) CINEMA</p>
-        <p>info@cinemamax.com</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-</body>
+  </body>
 </html>
