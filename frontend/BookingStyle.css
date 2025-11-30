@@ -452,3 +452,8 @@ body::before {
         font-size: 14px;
     }
 }
+
+.justified-spaced{
+    text-align: justify;
+    line-height: 2.2;
+}

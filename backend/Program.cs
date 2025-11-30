@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Hosting;
 using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,11 +12,11 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 app.UseCors();
 
-BookingLinkedList goodBoyList = new BookingLinkedList();
-BookingLinkedList supermanList = new BookingLinkedList();
-BookingLinkedList batmantList = new BookingLinkedList();
+BookingLinkedList spidermanList = new BookingLinkedList();
+BookingLinkedList drStrangeList = new BookingLinkedList();
+BookingLinkedList dSlayerList = new BookingLinkedList();
 
-app.MapGet("/", () => "🎬 YayMovies Backend is running!");
+app.MapGet("/", () => "Backend is running!");
 
 app.MapPost("/api/storeBooking", async (HttpContext context) =>
 {
@@ -33,43 +30,43 @@ app.MapPost("/api/storeBooking", async (HttpContext context) =>
             return;
         }
 
-        if (booking.movieTitle == "Goodboy")
+        if (booking.movieTitle == "Spiderman: No way Home")
         {
-            if (goodBoyList.SeatTaken(booking))
+            if (spidermanList.SeatTaken(booking))
             {
                 await context.Response.WriteAsync("Seat Already Taken!");
                 return;
             }
-            goodBoyList.AddBooking(booking);
-            goodBoyList.DisplayAll();
+            spidermanList.AddBooking(booking);
+            spidermanList.DisplayAll();
         }
-        else if(booking.movieTitle == "Superman")
+        else if(booking.movieTitle == "Doctor Strange: Multiverse of Madness")
         {
-            if(supermanList.SeatTaken(booking))
+            if(drStrangeList.SeatTaken(booking))
             {
                 await context.Response.WriteAsync("Seat Already Taken!");
                 return;
             }
-            supermanList.AddBooking(booking);
-            supermanList.DisplayAll();
+            drStrangeList.AddBooking(booking);
+            drStrangeList.DisplayAll();
         }
-        else if(booking.movieTitle == "Batman")
+        else if(booking.movieTitle == "Demon Slayer: Infinity Castle")
         {
-            if(batmantList.SeatTaken(booking))
+            if(dSlayerList.SeatTaken(booking))
             {
                 await context.Response.WriteAsync("Seat Already Taken!");
                 return;
             }
 
-            batmantList.AddBooking(booking);
-            batmantList.DisplayAll();
+            dSlayerList.AddBooking(booking);
+            dSlayerList.DisplayAll();
         }
 
         await context.Response.WriteAsync($"Stored booking for {booking.name}");
     }
     catch (Exception ex)
     {
-        Console.WriteLine("❌ Error: " + ex.Message);
+        Console.WriteLine("Error: " + ex.Message);
         context.Response.StatusCode = 500;
         await context.Response.WriteAsync("Internal Server Error.");
     }
@@ -117,13 +114,13 @@ public class BookingLinkedList
             tail = newNode;
         }
 
-        Console.WriteLine($"✅ Booking added: {booking.name} | time: {booking.time} | seat: {booking.seat} | Movie: {booking.movieTitle} | cost: {booking.cost}");
+        Console.WriteLine($"\n[Booking added: {booking.name} | time: {booking.time} | seat: {booking.seat} | Movie: {booking.movieTitle} | cost: {booking.cost}]");
     }
 
     public void DisplayAll()
     {
-        Console.WriteLine("🎟️ All Bookings:");
         BookingNode? temp = head;
+        Console.WriteLine($"\nAll Bookings for movie >>{temp.Data.movieTitle}<<");
         while (temp != null)
         {
             Console.WriteLine($"→ {temp.Data.name}, time: {temp.Data.time}, seat: {temp.Data.seat}, Movie: {temp.Data.movieTitle}, cost: {temp.Data.cost}");

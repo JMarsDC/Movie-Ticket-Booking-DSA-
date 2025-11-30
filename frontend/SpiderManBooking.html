@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BookingStyle.css">
+    <title>Spiderman: No way Home</title>
+    <link rel="icon" type="image/png" href="img/Logo.png">
+</head>
+<body>
+    <!-- navbar -->
+    <header class="navbar">
+        <img src="img/Absolute.png" alt="Absolute Cinema Logo" class="logo">
+        <nav>
+            <a href="Home.html">HOME</a>
+            <a href="#exclusive">EXCLUSIVE</a>
+        </nav>
+    </header>
+
+    <!-- main container -->
+    <div class="container">
+
+        <!-- movie info -->
+        <div class="movie-info">
+            <img src="img/temp-movie-spide.jpg" alt="Movie Poster (Placeholder)">
+            <div class="movie-details">
+                <h2 id="movie-title">Spiderman: No way Home</h2>
+                <br>
+                <p class="justified-spaced">
+                With Spider-Man's identity now revealed, our friendly neighborhood web-slinger is unmasked and 
+                no longer able to separate his normal life as Peter Parker from the high stakes of being a 
+                superhero. When Peter asks for help from Doctor Strange, the stakes become even more dangerous, 
+                forcing him to discover what it truly means to be Spider-Man.
+                </p>
+                <br>
+                <p class="justified-spaced"> <strong>Director:</strong> <a href="https://www.google.com/search?
+                    client=opera-gx&hs=37J&sca_esv=77100b2799732c71&sxsrf=AE3TifPHhDdNdOAN2TQR8pDDkzz7J3u3Ag:17
+                    64480148701&q=Jon+Watts&si=AMgyJEtRPX4ld4pdQeltMBlsXK6YnLg9be4xryEBJwXFHLOO-L7-bNFWJsKp-1Zu
+                    1bYW3lsv2eASwcTEHkzoabt3uVfNFqG4Q0yCMgz5rOzv1BTgkfK18mzZbsUxMmnQVTNkrE47lSAnAyIzFcwT8qBnnBX
+                    6q-9rAAfg1XBvRzrrOX57JguD5f5MlKSzJlratCS0Xj7xVvTyRmXzXKOCkscbJNS_tv8cTA%3D%3D&sa=X&ved=2ahU
+                    KEwi_1efjkJmRAxWScvUHHRtiAO0QmxN6BAgtEAI">Jon Watts</a> <br>
+
+                    <strong>Distributed by:</strong> <a href="https://www.google.com/search?client=opera-gx&hs=3
+                    7J&sca_esv=77100b2799732c71&sxsrf=AE3TifPHhDdNdOAN2TQR8pDDkzz7J3u3Ag:1764480148701&q=Sony+
+                    Pictures+Releasing&si=AMgyJEtRPX4ld4pdQeltMBlsXK6YnLg9be4xryEBJwXFHLOO-A5paAKsVHVENG7BGz2nKQ4b
+                    t4XcCJDulTvyeKYmvegU9OCYBJv5JKk4_AAVjYvo3x50mwP0PJgceRJiT0NkLyynsTI9wNkfM0VLw9Yigd8phFZw2F4x
+                    1s_cCZqilM5quaJRYY3ZMflaSLOSHWPRR6povVLOMqAAzqPRcy9atKj_D4SveQ%3D%3D&sa=X&ved=2ahUKEwi_1efjk
+                    JmRAxWScvUHHRtiAO0QmxN6BAguEAI">Pictures Releasing</a>
+                </p>
+                <br>
+                <p>Reviews: ★★★★★</p>
+            </div>
+        </div>
+
+        <!-- ticket & price -->
+        <div class="booking-section">
+            <div class="ticket-info">
+                <h1>One Ticket ONLY</h1>
+            </div>
+      <div class="total-price">
+  <button id="snack-btn" class="snacks">Add Snacks? +₱100</button>
+  <br> <p class="justified-spaced">Popcorn and small drink</p>
+  <br>
+  <br>
+  Total Payment: ₱<span id="ticket-price" data-base-price="350">350.00</span>
+      </div>
+        </div>
+
+        <!-- form section -->
+        <div class="form-section">
+
+        <!-- time selection on top -->
+        <div class="time-section">
+            <label>Select Time:</label>
+            <div class="time-options">
+                <input type="radio" name="time" id="time3" value="3PM">
+                <label for="time3" class="time-box">3:00 PM</label>
+
+                <input type="radio" name="time" id="time6" value="6PM">
+                <label for="time6" class="time-box">6:00 PM</label>
+
+                <input type="radio" name="time" id="time9" value="9PM">
+                <label for="time9" class="time-box">9:00 PM</label>
+            </div>
+        </div>
+
+        <!-- seat selection -->
+<div class="seat-section">
+    <div class="seat-legend">
+        <div class="legend-item">
+            <div class="legend-color your-seat"></div>
+            <span>Your seat</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color available"></div>
+            <span>Available</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color sold"></div>
+            <span>Sold</span>
+        </div>
+    </div>
+    
+    <div class="cinema-screen">SCREEN</div>
+
+    <input type="hidden" id="seat" value="">
+    <div class="seat-map-container">
+        <div class="seat-row">
+            <div class="row-label">A</div>
+            <div class="seat available" data-seat="A11">11</div>
+            <div class="seat available" data-seat="A10">10</div>
+            <div class="seat available" data-seat="A9">9</div>
+            <div class="seat available" data-seat="A8">8</div>
+            <div class="seat available" data-seat="A7">7</div>
+            <div class="seat available" data-seat="A6">6</div>
+            <div class="seat available" data-seat="A5">5</div>
+            <div class="seat available" data-seat="A4">4</div>
+            <div class="seat available" data-seat="A3">3</div>
+            <div class="seat available" data-seat="A2">2</div>
+            <div class="seat available" data-seat="A1">1</div>
+        </div>
+        
+        <!-- Rows B through L (normal rows) -->
+        <div class="seat-row">
+            <div class="row-label">B</div>
+            <div class="seat available" data-seat="B12">12</div>
+            <div class="seat available" data-seat="B11">11</div>
+            <div class="seat available" data-seat="B10">10</div>
+            <div class="seat available" data-seat="B9">9</div>
+            <div class="seat available" data-seat="B8">8</div>
+            <div class="seat available" data-seat="B7">7</div>
+            <div class="seat available" data-seat="B6">6</div>
+            <div class="seat available" data-seat="B5">5</div>
+            <div class="seat available" data-seat="B4">4</div>
+            <div class="seat available" data-seat="B3">3</div>
+            <div class="seat available" data-seat="B2">2</div>
+            <div class="seat available" data-seat="B1">1</div>
+        </div>
+        
+        <div class="seat-row">
+            <div class="row-label">C</div>
+            <div class="seat available" data-seat="C12">12</div>
+            <div class="seat available" data-seat="C11">11</div>
+            <div class="seat available" data-seat="C10">10</div>
+            <div class="seat available" data-seat="C9">9</div>
+            <div class="seat available" data-seat="C8">8</div>
+            <div class="seat available" data-seat="C7">7</div>
+            <div class="seat available" data-seat="C6">6</div>
+            <div class="seat available" data-seat="C5">5</div>
+            <div class="seat available" data-seat="C4">4</div>
+            <div class="seat available" data-seat="C3">3</div>
+            <div class="seat available" data-seat="C2">2</div>
+            <div class="seat available" data-seat="C1">1</div>
+        </div>
+        
+        <div class="seat-row">
+            <div class="row-label">D</div>
+            <div class="seat available" data-seat="D12">12</div>
+            <div class="seat available" data-seat="D11">11</div>
+            <div class="seat available" data-seat="D10">10</div>
+            <div class="seat available" data-seat="D9">9</div>
+            <div class="seat available" data-seat="D8">8</div>
+            <div class="seat available" data-seat="D7">7</div>
+            <div class="seat available" data-seat="D6">6</div>
+            <div class="seat available" data-seat="D5">5</div>
+            <div class="seat available" data-seat="D4">4</div>
+            <div class="seat available" data-seat="D3">3</div>
+            <div class="seat available" data-seat="D2">2</div>
+            <div class="seat available" data-seat="D1">1</div>
+        </div>
+        
+    </div>
+</div>
+
+        <!-- name input -->
+        <div class="input-section">
+            <label for="name">Enter Your Name:</label>
+            <input type="text" id="name" placeholder="Your name">
+        </div>
+    </div>
+
+        <!-- buttons -->
+        <div class="button-section">
+            <button class="submit-btn" onclick="storeBooking()">Confirm Booking</button>
+            <button class="cancel-btn" onclick="cancelBooking()">Cancel</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
