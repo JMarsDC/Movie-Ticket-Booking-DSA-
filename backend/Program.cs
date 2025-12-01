@@ -1,6 +1,8 @@
 using System.Text.Json;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args); //creates the web server
+
+//this whole thing allows frontend and backend to interact
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -9,6 +11,7 @@ builder.Services.AddCors(options =>
     });
 });
 
+//builds the app
 var app = builder.Build();
 app.UseCors();
 
@@ -16,12 +19,13 @@ BookingLinkedList spidermanList = new BookingLinkedList();
 BookingLinkedList drStrangeList = new BookingLinkedList();
 BookingLinkedList dSlayerList = new BookingLinkedList();
 
-app.MapGet("/", () => "Backend is running!");
+app.MapGet("/", () => "Backend is running!"); //checker if backend is running
 
+//this endpoint runs whenever JS calls fetch
 app.MapPost("/api/storeBooking", async (HttpContext context) =>
 {
     try
-    {
+    {   //this reads the JSON from JS and turns into C# object
         var booking = await JsonSerializer.DeserializeAsync<Booking>(context.Request.Body);
 
         if (booking == null)
@@ -64,14 +68,14 @@ app.MapPost("/api/storeBooking", async (HttpContext context) =>
 
         await context.Response.WriteAsync($"Stored booking for {booking.name}");
     }
-    catch (Exception ex)
+    catch (Exception ex)//prevents backend from crashing on errors
     {
         Console.WriteLine("Error: " + ex.Message);
         context.Response.StatusCode = 500;
         await context.Response.WriteAsync("Internal Server Error.");
     }
 });
-app.Run("http://localhost:5501");
+app.Run("http://localhost:5501"); //runs the APP
 
 public class Booking
 {
